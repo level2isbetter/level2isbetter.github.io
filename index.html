@@ -10,12 +10,21 @@
   </header>
   <form>
     Amount of items:<br>
-    <input type="number" name="Quantity" min="0"><br>
+    <input type="number" id="myQuantity" min="0"><br>
     Price of Items:<br>
-    <input type="number" name="Price" min="0"><br>
-    <input type="submit" value="Submit">
+    <input type="number" id="myPrice" min="0"><br>
   </form>
   
-  <p>"Gross Silver: " + Price</p>
+  <button onclick="mySilver()">Calculate</button>
+  <p id="gross"></p>
+  
+  <script>
+    function mySilver() {
+      var x = document.getElementById("myQuantity").value;
+      var y = document.getElementById("myPrice").value;
+      
+      document.getElementById("gross").innerHTML = (x*.845)+(y*.845);
+    }
+  <p>"Gross Silver: "</p>
 </body>
 </html>
