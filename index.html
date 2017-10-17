@@ -9,24 +9,25 @@
     </div>
   </header>
   <form>
-    Amount of items:<br>
+    Amount of T1 (Timber, Ore):<br>
     <input type="number" id="myQuantity" min="0"><br>
-    Price of Items:<br>
+    Price of T1:<br>
     <input type="number" id="myPrice" min="0"><br>
   </form>
   
   <button onclick="mySilver()">Calculate</button>
-  <p id="gross"></p>
+  <p>Profit as T1: </p><p id="gross"></p>
+  
+  <p>Profit as T3: </p><p id="gross2"></p>
   
   <script>
     function mySilver() {
       var x = document.getElementById("myQuantity").value;
       var y = document.getElementById("myPrice").value;
       
-      document.getElementById("gross").innerHTML = (x*.845)+(y*.845);
+      document.getElementById("gross").innerHTML = (x)*(y*.845);
+      document.getElementById("gross2").innerHTML = ((((x/5)*2.5)/10)*2.5)*(y*.845)
     }
   </script>
-  
-  <p>"Gross Silver: "</p>
 </body>
 </html>
