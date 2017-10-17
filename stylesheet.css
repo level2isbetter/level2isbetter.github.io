@@ -1,3 +1,9 @@
-.navbar {
-  display: flex;
+body {
+  font-family: 'Rubik', sans-serif;
+  letter-spacing: 0.02em;
+  font-size:16px;
+  color: #000000;
+  margin: 0;
+  height: 100%;
+  overflow: auto;
 }
