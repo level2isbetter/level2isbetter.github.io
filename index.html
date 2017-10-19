@@ -25,6 +25,8 @@
     <input type="number" id="myCrafts" min="0"><br>
     Price of Regular Food/Alchemy:<br>
     <input type="number" id="myProducts" min="0"><br>
+    Price of Rare:<br>
+    <input type="number" id="myRare" min="0"><br>
   </form>
   
   <button onclick="myCooking()">Calculate</button>
@@ -41,8 +43,9 @@
     function myCooking(){
       var w = document.getElementById("myCrafts").value;
       var z = document.getElementById("myProduct").value;
+      var r = document.getElementById("myRare").value;
       
-      var price = (((z*.845)*2.5)+(z*.845)*.3);
+      var price = (((z*.845)*2.5)+(r*.845)*.3);
       var end = (w*price);
       
       document.getElementById("grossCook").innerHTML = end
