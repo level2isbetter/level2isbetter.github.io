@@ -8,6 +8,7 @@
       </h1>
     </div>
   </header>
+  <p>All of the values are assumed you are Artisan 1.</p>
   <form>
     Amount of T1 (Timber, Ore):<br>
     <input type="number" id="myQuantity" min="0"><br>
@@ -17,9 +18,17 @@
   
   <button onclick="myProcessing()">Calculate</button>
   <p>Profit as T1: </p><p id="gross"></p>
-  
   <p>Profit as T3: </p><p id="gross2"></p>
   
+  <form>
+    Amount of Food/Potion crafts:<br>
+    <input type="number" id="myCrafts" min="0"><br>
+    Price of Regular Food/Alchemy:<br>
+    <input type="number" id="myProducts" min="0"><br>
+  </form>
+  
+  <button onclick="myCooking()">Calculate</button>
+  <p>Profit: </p><p id="grossCook"></p>
   <script>
     function myProcessing() {
       var x = document.getElementById("myQuantity").value;
@@ -30,7 +39,13 @@
     }
     
     function myCooking(){
+      var w = document.getElementById("myCrafts").value;
+      var z = document.getElementById("myProduct").value;
       
+      var price = (((z*.845)*2.5)+(z*.845)*.3);
+      var end = (w*price);
+      
+      document.getElementById("grossCook").innerHTML = end
     }
   </script>
 </body>
