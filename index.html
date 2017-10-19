@@ -45,10 +45,9 @@
       var z = document.getElementById("myProduct").value;
       var r = document.getElementById("myRare").value;
       
-      var price = (((z*.845)*2.5)+(r*.845)*.3);
-      var end = (w*price);
+      var price = ((z*.845)*2.5)+((r*.845)*.3);
       
-      document.getElementById("grossCook").innerHTML = end;
+      document.getElementById("grossCook").innerHTML = w*price;
     }
   </script>
 </body>
