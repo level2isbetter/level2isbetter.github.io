@@ -4,6 +4,12 @@ h1 {
   font-size: 2em;
 }
 
+ul {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
 a {
   color: #000000;
 }
